@@ -181,8 +181,8 @@ namespace Demo_01
 
             #region Data Setup
 
-            Console.WriteLine(ProductList[0]);
-            Console.WriteLine(CustomerList[0]);
+            ////Console.WriteLine(ProductList[0]);
+            ////Console.WriteLine(CustomerList[0]);
 
             ////var result = ProductList.Where(P => P.UnitsInStock == 0);
             //var result = CustomerList.Where(C => C.City == "Berlin");

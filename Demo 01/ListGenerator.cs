@@ -232,7 +232,11 @@ namespace Demo_01
 
             };
 
-            CustomerList = (from e in XDocument.Load("Customers.xml").Root.Elements("customer")
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string projectDirectory = Directory.GetParent(baseDirectory).Parent.Parent.Parent.FullName;
+            string filePath = System.IO.Path.Combine(projectDirectory, "XML/Customers.xml");
+
+            CustomerList = (from e in XDocument.Load(filePath).Root.Elements("customer")
                             select new Customer()
                             {
                                 CustomerID = (string)e.Element("id"),
